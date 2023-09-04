@@ -1,4 +1,4 @@
-# Tugas besar divisi web chevalier
+# Tugas besar divisi android chevalier
 
 ## NAMA APLIKASI : CHEVALIER
 
