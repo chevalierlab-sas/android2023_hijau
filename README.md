@@ -1,2 +1,14 @@
-# android2023_hijau
-Android Dev 2023: Pengumpulan Tugas Akhir - Kelompok 3 (Hijau)
+# Tugas besar divisi web chevalier
+
+## NAMA APLIKASI : CHEVALIER
+
+deskripsi disini
+
+
+## Tuliskan nama anggota timnya
+
+Anggota yang mengerjakan:
+1. NAMA - D3 RPLA - NIM
+
+Anggota:
+1. NAMA - D3 RPLA - NIM - ketua/member
