@@ -44,6 +44,11 @@ class ItemList : BaseActivity() {
             startActivity(prevPage)
             finish()
         }
+
+        binding.fab.setOnClickListener{
+            startActivity(Intent(this, TambahBarang::class.java))
+            finish()
+        }
     }
 
     override fun onBackPressed() {

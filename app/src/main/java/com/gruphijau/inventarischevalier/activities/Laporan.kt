@@ -20,9 +20,10 @@ class Laporan : BaseActivity() {
         binding.recycleView.setHasFixedSize(true)
 
         laporanList = ArrayList()
-        laporanList.add(LaporanData(R.drawable.pc_1, "18 unit Komputer build"))
-        laporanList.add(LaporanData(R.drawable.printer_canon, "1 unit Printer Canon"))
-        laporanList.add(LaporanData(R.drawable.tv, "1 unit TV LG"))
+        laporanList.add(LaporanData(1, "Data Pengguna Baru", R.drawable.data_pengguna_baru, "Data pengguna baru tersimpan pada tanggal 12 Mei 2023"))
+        laporanList.add(LaporanData(2, "Barang Rusak", R.drawable.pc_1, "18 unit Komputer build"))
+        laporanList.add(LaporanData(3, "Barang Rusak", R.drawable.printer_canon, "1 unit Printer Canon"))
+        laporanList.add(LaporanData(4, "Barang Rusak", R.drawable.tv, "1 unit TV LG"))
         adapter = LaporanAdapter(laporanList)
         binding.recycleView.adapter =  adapter
         binding.recycleView.layoutManager = LinearLayoutManager(this)
@@ -32,11 +33,7 @@ class Laporan : BaseActivity() {
             startActivity(intent)
             finish()
         }
-    }
 
-    override fun onBackPressed() {
-        val intent = Intent(this, Dashboard::class.java)
-        startActivity(intent)
-        finish()
+
     }
 }

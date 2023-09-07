@@ -15,27 +15,28 @@
         android:layout_marginTop="34dp">
 
         <LinearLayout
-            android:id="@+id/btn_back"
+            android:id="@+id/btnBack"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginStart="20dp">
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/backbtn_cheva"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backbtn_cheva" />
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Laporan"
             android:textColor="#f7a400"
             android:textSize="28sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="3dp"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

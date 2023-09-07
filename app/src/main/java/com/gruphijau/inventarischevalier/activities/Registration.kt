@@ -15,24 +15,11 @@ class Registration : BaseActivity() {
         binding.tvIconBack.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnBuatAkun.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
         }
-        binding.tvIconBack.setOnClickListener{
-            val prevPage = Intent(this, MainActivity::class.java)
-            startActivity(prevPage)
-            finish()
-        }
-    }
-
-    override fun onBackPressed() {
-        val prevPage = Intent(this, MainActivity::class.java)
-        startActivity(prevPage)
-        finish()
     }
 }

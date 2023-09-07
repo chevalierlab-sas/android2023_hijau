@@ -2,11 +2,12 @@ package com.gruphijau.inventarischevalier.activities
 
 import android.content.Intent
 import android.os.Bundle
+import com.gruphijau.inventarischevalier.R
 import com.gruphijau.inventarischevalier.databinding.ActivityItemDetailsBinding
 
 class ItemDetails : BaseActivity() {
-    var itemQuantity = 0
-    var quantityAvailable = 0
+//    var itemQuantity = 0
+//    var quantityAvailable = 0
     private lateinit var binding: ActivityItemDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,50 +16,31 @@ class ItemDetails : BaseActivity() {
 
         val itemName = intent.getStringExtra("name") ?: ""
         val itemImage = intent.getIntExtra("image", 0)
-        val itemStatus = intent.getStringExtra("status") ?: ""
-        quantityAvailable = intent.getIntExtra("quantity", 0)
+        val itemQuality = intent.getStringExtra("status") ?: ""
+        val itemQuantity = intent.getIntExtra("quantity", 0)
+        val itemQuantity2 = intent.getStringExtra("quantity2")
+        val itemDescription = intent.getStringExtra("description")
         binding.imageDetail.setImageResource(itemImage)
         binding.titleDetail.text = itemName
+        binding.quantityAndStatus.text = "$itemQuantity Unit | $itemQuality"
+
+        if (itemDescription != null) {
+        binding.tvDeskripsiBarang.text = itemDescription
+        }
         binding.backBtn.setOnClickListener {
             val prevPage = Intent(this, ItemList::class.java)
             startActivity(prevPage)
             finish()
         }
-        binding.pinjamBtn.setOnClickListener {
-            if (itemStatus == "Baik") {
-                val intent = Intent(this, BorrowSuccess::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                val intent = Intent(this, BorrowFailed::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
-        binding.plusBtn.setOnClickListener {
-            binding.itemQuantity.text = addQuantity().toString()
-        }
-        binding.minusBtn.setOnClickListener {
-            binding.itemQuantity.text = decreaseQuantity().toString()
+        binding.editBtn.setOnClickListener {
+           val nextPage = Intent(this, EditBarang::class.java)
+            startActivity(nextPage)
         }
     }
     override fun onBackPressed() {
         val prevPage = Intent(this, ItemList::class.java)
         startActivity(prevPage)
         finish()
-    }
-    fun addQuantity(): Int {
-        if (itemQuantity < quantityAvailable) {
-        itemQuantity++
-        }
-        return itemQuantity
-    }
-
-    fun decreaseQuantity(): Int {
-        if (itemQuantity > 1) {
-            itemQuantity--
-        }
-        return itemQuantity
     }
 }
 

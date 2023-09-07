@@ -16,8 +16,9 @@ class LaporanAdapter(private val list: ArrayList<LaporanData>) : RecyclerView.Ad
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = list[position]
-        holder.binding.imageLaporan.setImageResource(currentItem.image)
-        holder.binding.txtUnit.text = currentItem.unit
+        holder.binding.ivImage.setImageResource(currentItem.image)
+        holder.binding.tvTitle.text = currentItem.title
+        holder.binding.tvDesc.text = currentItem.description
     }
 
     override fun getItemCount(): Int {

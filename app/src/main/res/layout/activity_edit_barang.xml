@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/backbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvEditBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Edit Barang"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back" />
+
+    <LinearLayout
+        android:id="@+id/cointaner_tambah_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_add_photo"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEditBarang">
+
+        <ImageView
+            android:id="@+id/ivAddPhotoBarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvUsername"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfoBarang"
+            app:srcCompat="@drawable/image_add_photo" />
+
+        <TextView
+            android:id="@+id/tvTambahFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Tambahkan Foto"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNamaBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Nama Barang"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cointaner_tambah_barang" />
+
+    <EditText
+        android:id="@+id/edtNamaBarang"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint="Printer Canon"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaBarang" />
+
+
+    <TextView
+        android:id="@+id/tvKondisiBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Kondisi Barang"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNamaBarang" />
+
+    <EditText
+        android:id="@+id/edtKondisiBarang"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint="Rusak"
+
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKondisiBarang" />
+
+    <TextView
+        android:id="@+id/tvJumlahBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Jumlah Barang"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtKondisiBarang" />
+
+    <EditText
+        android:id="@+id/edtJumlahBarang"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+
+        android:textSize="14sp"
+        android:hint="1 unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlahBarang" />
+
+    <TextView
+        android:id="@+id/tvDeskripsiBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Deskripsi Barang"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtJumlahBarang" />
+
+
+    <EditText
+        android:id="@+id/edtDeskripsiBarang"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:inputType="textCapSentences|textMultiLine"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:hint="1 Buah printer dengan merk canon yang dapat menghasilkan gambar yang jelas dengan tinta premium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeskripsiBarang" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/orangecheva"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDeskripsiBarang" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

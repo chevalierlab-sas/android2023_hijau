@@ -1,6 +1,6 @@
 # Tugas besar divisi android chevalier
 
-## NAMA APLIKASI : Inventaris Chevalier
+## NAMA APLIKASI : Inventaris Chevalier (Admin Version)
 
 Aplikasi Pembukuan Chevalier ini dibuat oleh tim dalam Chevalier Lab untuk kepentingan dalam 
 mengawasi dan mempermudah pengelolan barang atau aset milik Lab Chevalier. Dengan adanya 
@@ -14,11 +14,11 @@ berkembang seiring berjalannya waktu.
 Anggota yang mengerjakan:
 1. Amru Abid Zakly - D3 RPLA - 6706223139
 2. Aisyah Fadzila Hani - D3 RPLA - 6706223139
-3. Rd. M. Faisal R. J. - D3 RPLA - 1302220093
+3. Rd. M. Faisal R. J. - S1 RPL - 1302220093
 4. Wandi Ridwansyah - D3 RPLA - 6706220080
 
 Anggota:
 1. Amru Abid Zakly - D3 RPLA - 6706223139 - member
 2. Aisyah Fadzila Hani - D3 RPLA - 6706223139 - member
-3. Rd. M. Faisal R. J. - D3 RPLA - 1302220093 - member
+3. Rd. M. Faisal R. J. - S1 RPL - 1302220093 - member
 4. Wandi Ridwansyah - D3 RPLA - 6706220080 - member

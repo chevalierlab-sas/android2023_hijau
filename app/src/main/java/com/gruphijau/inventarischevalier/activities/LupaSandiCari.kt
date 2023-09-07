@@ -15,7 +15,6 @@ class LupaSandiCari : BaseActivity() {
         binding.tvBack.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnKirim.setOnClickListener{
@@ -23,17 +22,6 @@ class LupaSandiCari : BaseActivity() {
             val intent = Intent(this, KodeOTP::class.java)
             intent.putExtra("credential", credential)
             startActivity(intent)
-            finish()
         }
-        binding.tvBack.setOnClickListener{
-            val prevPage = Intent(this, MainActivity::class.java)
-            startActivity(prevPage)
-            finish()
-        }
-    }
-    override fun onBackPressed() {
-        val prevPage = Intent(this, MainActivity::class.java)
-        startActivity(prevPage)
-        finish()
     }
 }

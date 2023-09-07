@@ -6,9 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gruphijau.inventarischevalier.adapters.DashboardAdapter
 import com.gruphijau.inventarischevalier.R
-import com.gruphijau.inventarischevalier.adapters.NotifAdapter
 import com.gruphijau.inventarischevalier.data.DashboardData
-import com.gruphijau.inventarischevalier.data.NotifData
 import com.gruphijau.inventarischevalier.databinding.ActivityDashboardBinding
 
 class Dashboard : BaseActivity() {
@@ -17,10 +15,8 @@ class Dashboard : BaseActivity() {
     private var alert: AlertDialog? = null
     private lateinit var adapterBarang: DashboardAdapter
     private lateinit var adapterLaporan: DashboardAdapter
-    private lateinit var adapterNotif: NotifAdapter
     private lateinit var listBarang: ArrayList<DashboardData>
     private lateinit var listLaporan: ArrayList<DashboardData>
-    private lateinit var listNotif: ArrayList<NotifData>
     private lateinit var binding: ActivityDashboardBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,22 +33,19 @@ class Dashboard : BaseActivity() {
 
         binding.rvBarang.setHasFixedSize(true)
         binding.rvLaporan.setHasFixedSize(true)
-        binding.rvNotif.setHasFixedSize(true)
 
         listBarang = ArrayList()
         listLaporan = ArrayList()
-        listNotif = ArrayList()
 
         listBarang.add(DashboardData(1, "Daftar Barang"))
-        listBarang.add(DashboardData(2, "Pengembalian"))
-
+        listBarang.add(DashboardData(2, "Tambah Barang"))
 
         listLaporan.add(DashboardData(1, "Peminjaman"))
         listLaporan.add(DashboardData(2, "Data Pengguna"))
         listLaporan.add(DashboardData(3, "Laporan"))
         listLaporan.add(DashboardData(4, "Barang Masuk"))
+        listLaporan.add(DashboardData(5, "Supplier"))
 
-        listNotif.add(NotifData(1, "Tidak ada pemberitahuan"))
 
         adapterBarang = DashboardAdapter(listBarang, this)
         binding.rvBarang.adapter = adapterBarang
@@ -62,15 +55,10 @@ class Dashboard : BaseActivity() {
         binding.rvLaporan.adapter = adapterLaporan
         binding.rvLaporan.layoutManager = LinearLayoutManager(this)
 
-        adapterNotif = NotifAdapter(listNotif)
-        binding.rvNotif.adapter = adapterNotif
-        binding.rvNotif.layoutManager = LinearLayoutManager(this)
-
         binding.iconUser.setOnClickListener {
-            val nextPage = Intent(this, Settings::class.java)
+            val nextPage = Intent(this, EditProfile::class.java)
             intent.putExtra("username", username)
             startActivity(nextPage)
-            finish()
         }
 
         binding.dropdownBarang.setOnClickListener {
@@ -97,7 +85,7 @@ class Dashboard : BaseActivity() {
                 binding.laporanLine.setImageDrawable(null)
                 counterLaporan--
             } else if (counterLaporan == 0){
-            val newCount = 4
+            val newCount = 5
             adapterLaporan.setItemCount(newCount)
             binding.dropdownLaporan.setImageResource(R.drawable.icon_dropdown_after)
             binding.laporanLine.setImageResource(R.drawable.dropdown_line)
@@ -116,9 +104,9 @@ class Dashboard : BaseActivity() {
             .setMessage("Anda yakin ingin keluar?")
             .setPositiveButton("Ya") { _, _ ->
                 startActivity(Intent(this, MainActivity::class.java))
-                finish()
             }
             .setNegativeButton("Tidak", null)
+
         .show()
     }
 }

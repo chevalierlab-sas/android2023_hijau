@@ -7,6 +7,10 @@ android {
     namespace 'com.gruphijau.inventarischevalier'
     compileSdk 33
 
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.gruphijau.inventarischevalier"
         minSdk 21
@@ -37,7 +41,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.core:core-splashscreen:1.0.1'
     implementation("androidx.recyclerview:recyclerview:")
     // For control over item selection of both touch and mouse driven selection

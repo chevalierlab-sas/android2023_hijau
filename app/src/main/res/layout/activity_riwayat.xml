@@ -19,22 +19,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <Button
+        <LinearLayout
             android:id="@+id/button_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/button_back"
-            android:textColor="@color/cheva_kuning"
-            android:textSize="30sp"
-            android:backgroundTint="@color/white"/>
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backbtn_cheva" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/riwayat_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_semi_bold"
             android:text="@string/riwayat_header"
             android:textColor="@color/cheva_kuning"

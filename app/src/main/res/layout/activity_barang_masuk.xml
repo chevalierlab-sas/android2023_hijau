@@ -32,12 +32,13 @@
 
             <ImageView
                 android:id="@+id/btn_back"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="50dp"
                 android:fontFamily="@font/poppins_bold"
                 android:src="@drawable/backbtn_cheva"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

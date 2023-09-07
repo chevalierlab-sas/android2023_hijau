@@ -19,16 +19,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="#00FFFFFF"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/button_back"
             android:textColor="@color/cheva_kuning"
-            android:textSize="30sp"
-            android:backgroundTint="@color/white"/>
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/edit_profil"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_semi_bold"
-            android:text="@string/edit_profil_header"
+            android:text="Pengaturan"
             android:textColor="@color/cheva_kuning"
             android:textSize="29sp" />
     </LinearLayout>
@@ -64,31 +64,22 @@
                 android:layout_height="120dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="25dp"
-                android:src="@drawable/edited_photo" />
+                android:src="@drawable/profil_admin" />
 
             <TextView
-                android:id="@+id/user_name"
+                android:id="@+id/admin_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/user_name"
+                android:text="Admin"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="51dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/email"
-                android:textSize="12sp" />
 
             <LinearLayout
                 android:id="@+id/container_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_marginTop="40dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -97,21 +88,27 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/fullname_title"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
 
-                <EditText
-                    android:text="Sandika"
-                    android:id="@+id/edtName"
-                    android:layout_width="340dp"
-                    android:layout_height="46dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/container"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:padding="10dp"
-                    app:layout_constraintBottom_toTopOf="@id/tvPassword"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                <LinearLayout
+                    android:id="@+id/fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_setting_container"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/adminname_placholder"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/white"
+                        android:text="Amelia" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -127,21 +124,27 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/email_title"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
 
-                <EditText
-                    android:text="sandi@gmail.com"
-                    android:id="@+id/edtEmail"
-                    android:layout_width="340dp"
-                    android:layout_height="46dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/container"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:padding="10dp"
-                    app:layout_constraintBottom_toTopOf="@id/tvPassword"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                <LinearLayout
+                    android:id="@+id/title_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_setting_container"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/email_placholder"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/white"
+                        android:text="amelia@gmail.com" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -157,28 +160,34 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/nomor_telepon_title"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
 
-                <EditText
-                    android:text="0812333355434"
-                    android:id="@+id/edtPhone"
-                    android:layout_width="340dp"
-                    android:layout_height="46dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/container"
-                    android:ems="10"
-                    android:inputType="phone"
-                    android:padding="10dp"
-                    app:layout_constraintBottom_toTopOf="@id/tvPassword"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                <LinearLayout
+                    android:id="@+id/no_telp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_setting_container"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/no_telp_placholder"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/white"
+                        android:text="0812333554434" />
+                </LinearLayout>
             </LinearLayout>
 
 
 
             <LinearLayout
-                android:id="@+id/btnSave"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnLogout"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="27dp"
@@ -187,17 +196,22 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
+                <ImageView
+                    android:id="@+id/ivLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logout"
+                    android:layout_marginEnd="7dp"/>
                 <TextView
-                    android:id="@+id/logout_button"
+                    android:id="@+id/tvLogout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="110dp"
-                    android:layout_marginEnd="110dp"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:text="Simpan"
+                    android:text="Keluar"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"/>
             </LinearLayout>
 
         </LinearLayout>

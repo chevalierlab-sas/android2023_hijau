@@ -28,17 +28,17 @@ class DashboardAdapter(private val dropdownList:ArrayList<DashboardData>, privat
                 if (itemName == "Daftar Barang") {
                     val nextPage = Intent(itemView.context, ItemList::class.java)
                     itemView.context.startActivity(nextPage)
-                    activity.finish()
+                } else if (itemName == "Tambah Barang") {
+                    val nextPage = Intent(itemView.context, TambahBarang::class.java)
+                    itemView.context.startActivity(nextPage)
                 } else if (itemName == "Pengembalian") {
                     val nextPage = Intent(itemView.context, Pengembalian::class.java)
                     itemView.context.startActivity(nextPage)
-                    activity.finish()
                 } else if (itemName == "Peminjaman") {
                     val nextPage = Intent(itemView.context, Peminjaman::class.java)
                     itemView.context.startActivity(nextPage)
-                    activity.finish()
                 } else if (itemName == "Data Pengguna") {
-                    val nextPage = Intent(itemView.context, UserData::class.java)
+                    val nextPage = Intent(itemView.context, DataPengguna::class.java)
                     itemView.context.startActivity(nextPage)
                     activity.finish()
                 }  else if (itemName == "Laporan") {
@@ -47,6 +47,10 @@ class DashboardAdapter(private val dropdownList:ArrayList<DashboardData>, privat
                     activity.finish()
                 } else if (itemName == "Barang Masuk") {
                     val nextPage = Intent(itemView.context, BarangMasuk::class.java)
+                    itemView.context.startActivity(nextPage)
+                    activity.finish()
+                } else if (itemName == "Supplier") {
+                    val nextPage = Intent(itemView.context, SupplierFragment::class.java)
                     itemView.context.startActivity(nextPage)
                     activity.finish()
                 } else {

@@ -1,61 +1,160 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <LinearLayout
-        android:id="@+id/peminjamanHeader"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
         android:gravity="center_vertical"
-        android:layout_marginTop="26dp">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
         <ImageButton
-        android:id="@+id/backBtn"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:src="@drawable/backbtn_cheva"
-        android:background="@android:color/transparent"/>
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Peminjaman"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="20sp"
-        android:textColor="@color/cheva_kuning"
-        android:layout_marginTop="2dp"
-        />
-    </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_peminjaman"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_below="@id/peminjamanHeader"
-        tools:listitem="@layout/rv_peminjaman"
-        tools:itemCount="4"
-        />
-    <LinearLayout
-        android:id="@+id/pengembalianHeader"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:gravity="center_vertical"
-        android:layout_below="@id/rv_peminjaman">
+            android:id="@+id/backBtn"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/backbtn_cheva" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pengembalian"
-            android:fontFamily="@font/poppins_bold"
-            android:textSize="20sp"
-            android:textColor="@color/cheva_kuning"
             android:layout_marginTop="2dp"
-            android:layout_marginStart="75dp"
-            />
+            android:fontFamily="@font/poppins_bold"
+            android:text="Peminjaman"
+            android:textColor="@color/cheva_kuning"
+            android:textSize="20sp" />
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_pengembalian"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pengembalianHeader"
-        tools:listitem="@layout/rv_pengembalian"
-        tools:itemCount="5"
-        />
+        android:layout_marginTop="51dp"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-</RelativeLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Dispenser"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="130dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="29dp"
+            android:src="@drawable/dispenser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="42dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Tanggal Peminjaman"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+        <EditText
+            android:id="@+id/edtTanggal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stroke_template"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTanggal" />
+
+        <TextView
+            android:id="@+id/tvJumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Jumlah Peminjaman"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTanggal" />
+
+        <EditText
+            android:id="@+id/edtJumlah"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stroke_template"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJumlah" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="51dp"
+            android:gravity="end"
+            app:layout_constraintTop_toBottomOf="@+id/edtJumlah">
+
+            <TextView
+                android:id="@+id/btnDisapprove"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/container8dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Tolak"
+                android:textColor="@color/cheva_kuning"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtJumlah" />
+
+            <TextView
+                android:id="@+id/btnApprove"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/orange8dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Setujui"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

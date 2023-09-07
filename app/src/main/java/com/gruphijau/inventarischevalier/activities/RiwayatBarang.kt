@@ -32,10 +32,6 @@ class RiwayatBarang : BaseActivity() {
             startActivity(prevPage)
             finish()
         }
-    }
-    override fun onBackPressed() {
-        val prevPage = Intent(this, Settings::class.java)
-        startActivity(prevPage)
-        finish()
+
     }
 }

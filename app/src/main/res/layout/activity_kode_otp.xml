@@ -51,7 +51,6 @@
         android:layout_height="56dp"
         android:layout_marginBottom="40dp"
         android:ems="10"
-        android:padding="10dp"
         android:background="@drawable/stroke_template"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@id/btnKirim"

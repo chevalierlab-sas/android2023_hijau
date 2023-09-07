@@ -29,35 +29,9 @@ class ChangePassword : BaseActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("passwordBaru", sandiBaru)
             startActivity(intent)
-            finish()
-        }
-
-        binding.tvIkonBack.setOnClickListener{
-            alert2()
-        }
-
-        binding.btnKirimSandiBaru.setOnClickListener{
-            val prevPage = Intent(this, MainActivity::class.java)
-            startActivity(prevPage)
-            finish()
         }
     }
-    override fun onBackPressed() {
-        alert2()
-    }
-    fun alert2(){
-        alert = AlertDialog.Builder(this)
-            .setTitle("Meninggalkan Halaman")
-            .setMessage("Anda yakin?Jika anda keluar, anda harus memasukkan OTP kembali.")
-            .setPositiveButton("Ya") { _, _ ->
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
-            .setNegativeButton("Tidak", null)
-            .create()
 
-        alert?.show()
-    }
     fun alertCreate() {
         alert = AlertDialog.Builder(this)
             .setTitle("Pemberitahuan")

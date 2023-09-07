@@ -1,128 +1,66 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:id="@+id/data_pengguna_header"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_marginTop="26dp">
-        <ImageButton
-        android:id="@+id/backBtn"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:src="@drawable/backbtn_cheva"
-        android:background="@android:color/transparent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34dp">
+
+        <LinearLayout
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backbtn_cheva" />
+        </LinearLayout>
+
         <TextView
-        android:layout_width="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Data Pengguna"
+            android:textColor="#f7a400"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_userdata"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Pengguna"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="20sp"
-        android:textColor="@color/cheva_kuning"
-        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_marginTop="19dp"
+        tools:listitem="@layout/rv_user_data"
         />
 
-    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="@color/cheva_kuning"
+        android:src="@drawable/plus_symbol"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/data_pengguna_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@id/data_pengguna_header">
 
-        <ImageView
-            android:id="@+id/image_grafik"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/chart"
-            android:layout_margin="30dp"
-            android:layout_gravity="center_horizontal"/>
-
-        <ImageView
-            android:id="@+id/image_chart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/chart_data_pengguna"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"/>
-
-        <LinearLayout
-            android:id="@+id/container_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container"
-            android:orientation="horizontal"
-            android:layout_marginStart="28dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginTop="20dp">
-            <ImageView
-                android:id="@+id/user_photo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/image_user_photo"
-                android:layout_margin="16dp"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
-                <TextView
-                    android:id="@+id/user_fullname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Milla"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textSize="14sp"/>
-                <TextView
-                    android:id="@+id/user_detail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pengguna, Jakarta"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="12sp"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container"
-            android:orientation="horizontal"
-            android:layout_marginStart="28dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:src="@drawable/image_user_photo"
-                app:srcCompat="@drawable/image_photo_supplier" />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dian"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textSize="14sp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Supplier, Jakarta"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="12sp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

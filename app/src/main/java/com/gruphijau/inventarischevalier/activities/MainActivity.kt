@@ -14,18 +14,11 @@ class MainActivity : BaseActivity() {
         binding.tvBuatAkun.setOnClickListener{
             val intent = Intent(this, Registration::class.java)
             startActivity(intent)
-            finish()
-        }
-        binding.tvNoAkun.setOnClickListener{
-            val intent = Intent(this, Registration::class.java)
-            startActivity(intent)
-            finish()
         }
 
         binding.tvLupaSandi.setOnClickListener{
             val intent = Intent(this, LupaSandiCari::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnLogin.setOnClickListener {
@@ -48,9 +41,5 @@ class MainActivity : BaseActivity() {
                 }
             }
         }
-    }
-
-    override fun onBackPressed() {
-        finish()
     }
 }

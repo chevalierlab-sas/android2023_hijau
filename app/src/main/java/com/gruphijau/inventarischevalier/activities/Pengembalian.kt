@@ -31,10 +31,7 @@ class Pengembalian : BaseActivity() {
             startActivity(intent)
             finish()
         }
-    }
-    override fun onBackPressed() {
-        val intent = Intent(this, Dashboard::class.java)
-        startActivity(intent)
-        finish()
+
+
     }
 }

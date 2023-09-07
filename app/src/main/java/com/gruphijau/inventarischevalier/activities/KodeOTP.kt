@@ -15,23 +15,11 @@ class KodeOTP : BaseActivity() {
         binding.tvIconBackFromOTP.setOnClickListener{
             val intent = Intent(this, LupaSandiCari::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnKirim.setOnClickListener{
             val intent = Intent(this, ChangePassword::class.java)
             startActivity(intent)
-            finish()
         }
-        binding.tvIconBackFromOTP.setOnClickListener{
-            val prevPage = Intent(this, LupaSandiCari::class.java)
-            startActivity(prevPage)
-            finish()
-        }
-    }
-    override fun onBackPressed() {
-        val prevPage = Intent(this, LupaSandiCari::class.java)
-        startActivity(prevPage)
-        finish()
     }
 }

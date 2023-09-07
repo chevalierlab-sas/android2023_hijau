@@ -14,8 +14,7 @@
         tools:targetApi="31">
         <activity
             android:name=".activities.SplashScreen"
-            android:exported="true"
-            android:noHistory="true">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,8 +42,14 @@
         <activity android:name=".activities.RiwayatBarang"/>
         <activity android:name=".activities.Settings"/>
         <activity android:name=".activities.SplashLogo"/>
-        <activity android:name=".activities.UserData"/>
+        <activity android:name=".activities.DataPengguna"/>
         <activity android:name=".activities.Pengembalian"/>
+        <activity android:name=".activities.EditBarang"/>
+        <activity android:name=".activities.EditUserData"/>
+        <activity android:name=".activities.PeminjamanApprove"/>
+        <activity android:name=".activities.PeminjamanDisapprove"/>
+        <activity android:name=".activities.TambahBarang"/>
+        <activity android:name=".activities.SupplierFragment"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
