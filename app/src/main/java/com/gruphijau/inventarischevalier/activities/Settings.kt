@@ -23,11 +23,13 @@ class Settings : BaseActivity() {
             intent.putExtra("username", username)
             intent.putExtra("email", email)
             startActivity(nextPage)
+            finish()
         }
 
         binding.containerFill2.setOnClickListener {
             val nextPage = Intent(this, RiwayatBarang::class.java)
             startActivity(nextPage)
+            finish()
         }
 
         binding.buttonBack.setOnClickListener {
@@ -55,7 +57,6 @@ class Settings : BaseActivity() {
                 finish()
             }
             .setNegativeButton("Tidak", null)
-
             .show()
     }
 }

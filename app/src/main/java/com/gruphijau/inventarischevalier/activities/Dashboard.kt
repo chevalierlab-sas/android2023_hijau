@@ -119,7 +119,6 @@ class Dashboard : BaseActivity() {
                 finish()
             }
             .setNegativeButton("Tidak", null)
-
         .show()
     }
 }
